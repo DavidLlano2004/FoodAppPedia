@@ -19,9 +19,9 @@ const CustomButtonAddRecipe = () => {
         justifyContent: "center",
         alignItems: "center",
       }}
-      className=" -top-3 justify-center items-center"
+      className=" -top-3 justify-center items-center  active:opacity-40 "
     >
-      <View className=" w-[50px] h-[50px] rounded-full bg-light-primary justify-center items-center">
+      <View className=" w-[50px] h-[50px] rounded-full bg-light-primary shadow-sm shadow-light-primary justify-center items-center">
         <IconSvg width={18} height={18} image={IconPlusWhite} />
       </View>
     </Pressable>

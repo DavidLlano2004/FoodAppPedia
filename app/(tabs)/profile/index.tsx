@@ -1,4 +1,4 @@
-import ThemedView from '@/presentation/theme/components/ThemedView'
+import ThemedView from '@/presentation/theme/components/theme/ThemedView'
 import React from 'react'
 import { Text } from 'react-native'
 

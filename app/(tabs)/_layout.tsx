@@ -1,6 +1,7 @@
 import { Icons } from "@/assets/icons/IconsProvider";
 import { Colors } from "@/constants/Colors";
 import { useThemeColor } from "@/hooks/useThemeColor";
+import ContainerIconsRightHeader from "@/presentation/theme/components/ContainerIconsRightHeader";
 import ContainerIconTitleScreen from "@/presentation/theme/components/ContainerIconTitleScreen";
 import CustomButtonAddRecipe from "@/presentation/theme/components/CustomButtonAddRecipe";
 import IconSvg from "@/presentation/theme/components/IconSvg";
@@ -53,6 +54,7 @@ const TabsLayout = () => {
               image={focused ? IconHomeFilledRed : IconHomeOutlineGray}
             />
           ),
+          headerRight: () => <ContainerIconsRightHeader screen="home" />,
         }}
         listeners={{
           tabPress: () => {
@@ -69,6 +71,7 @@ const TabsLayout = () => {
               image={focused ? IconDiscoverFilledRed : IconDiscoverOutlineGray}
             />
           ),
+          headerRight: () => <ContainerIconsRightHeader screen="discover" />,
         }}
         listeners={{
           tabPress: () => {
@@ -91,6 +94,8 @@ const TabsLayout = () => {
               image={focused ? IconRecipesFilledRed : IconRecipesOutlineGray}
             />
           ),
+          headerRight: () => <ContainerIconsRightHeader screen="recipes" />,
+
         }}
         listeners={{
           tabPress: () => {
@@ -107,6 +112,8 @@ const TabsLayout = () => {
               image={focused ? IconProfileFillledRed : IconProfileOutlineGray}
             />
           ),
+          headerRight: () => <ContainerIconsRightHeader screen="profile" />,
+
         }}
         listeners={{
           tabPress: () => {

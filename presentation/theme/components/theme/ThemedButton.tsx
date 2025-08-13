@@ -2,7 +2,7 @@ import * as Haptics from "expo-haptics";
 import React from "react";
 import { Pressable, PressableProps, Text } from "react-native";
 import { SvgProps } from "react-native-svg";
-import IconSvg from "./IconSvg";
+import IconSvg from "../IconSvg";
 
 interface Props extends PressableProps {
   className?: string;

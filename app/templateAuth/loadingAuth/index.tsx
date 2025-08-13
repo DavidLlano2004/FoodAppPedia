@@ -1,7 +1,7 @@
 import { Images } from "@/assets/images/ImagesProvider";
-import ThemedLoading from "@/presentation/theme/components/themedLoading/ThemedLoading";
-import ThemedText from "@/presentation/theme/components/ThemedText";
-import ThemedView from "@/presentation/theme/components/ThemedView";
+import ThemedLoading from "@/presentation/theme/components/theme/ThemedLoading";
+import ThemedText from "@/presentation/theme/components/theme/ThemedText";
+import ThemedView from "@/presentation/theme/components/theme/ThemedView";
 import { router } from "expo-router";
 import React, { useEffect } from "react";
 import { Image } from "react-native";

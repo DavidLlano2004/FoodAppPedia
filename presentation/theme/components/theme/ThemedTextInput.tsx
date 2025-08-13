@@ -17,11 +17,11 @@ const ThemedTextInput = ({ icon, label, style, ...rest }: Props) => {
 
   return (
     <View className=" gap-2">
-      <ThemedText className="text-lg" type="bold">
+      <ThemedText className="text-lg text-light-text dark:text-dark-text" type="bold">
         {label}
       </ThemedText>
       <View
-        className={` border rounded-2xl h-[45px] px-3 ${isActive ? "border-light-primary" : "border-dark-tertiary"}`}
+        className={` border rounded-2xl h-[45px] px-4 ${isActive ? "border-light-primary" : "border-dark-tertiary"}`}
         onTouchStart={() => inputRef.current?.focus()}
       >
         {/* {icon && (
