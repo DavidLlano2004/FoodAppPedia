@@ -1,10 +1,10 @@
 import { Icons } from "@/assets/icons/IconsProvider";
 import { Colors } from "@/constants/Colors";
 import { useThemeColor } from "@/hooks/useThemeColor";
-import ContainerIconsRightHeader from "@/presentation/theme/components/ContainerIconsRightHeader";
-import ContainerIconTitleScreen from "@/presentation/theme/components/ContainerIconTitleScreen";
-import CustomButtonAddRecipe from "@/presentation/theme/components/CustomButtonAddRecipe";
-import IconSvg from "@/presentation/theme/components/IconSvg";
+import ContainerIconsRightHeader from "@/presentation/shared/molecules/ContainerIconsRightHeader";
+import ContainerIconTitleScreen from "@/presentation/shared/molecules/ContainerIconTitleScreen";
+import CustomButtonAddRecipe from "@/presentation/shared/molecules/CustomButtonAddRecipe";
+import IconSvg from "@/presentation/shared/molecules/IconSvg";
 import * as Haptics from "expo-haptics";
 import { Tabs } from "expo-router";
 import React from "react";
@@ -32,7 +32,7 @@ const TabsLayout = () => {
         tabBarActiveTintColor: Colors.light.primary,
         tabBarInactiveTintColor: Colors.light.secondary,
         tabBarLabelStyle: {
-          fontWeight: "800",
+          fontWeight: "600",
         },
         tabBarStyle: {
           borderTopWidth: 0,
@@ -80,7 +80,7 @@ const TabsLayout = () => {
         }}
       />
       <Tabs.Screen
-        name="new-recipe/index"
+        name="new-recipe-tab/index"
         options={{
           tabBarButton: () => <CustomButtonAddRecipe />,
         }}
@@ -95,7 +95,6 @@ const TabsLayout = () => {
             />
           ),
           headerRight: () => <ContainerIconsRightHeader screen="recipes" />,
-
         }}
         listeners={{
           tabPress: () => {
@@ -104,16 +103,15 @@ const TabsLayout = () => {
         }}
       />
       <Tabs.Screen
-        name="profile/index"
+        name="profile"
         options={{
-          title: "Perfil",
+          title: "Cuenta",
           tabBarIcon: ({ focused }) => (
             <IconSvg
               image={focused ? IconProfileFillledRed : IconProfileOutlineGray}
             />
           ),
           headerRight: () => <ContainerIconsRightHeader screen="profile" />,
-
         }}
         listeners={{
           tabPress: () => {

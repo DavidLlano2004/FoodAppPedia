@@ -18,7 +18,11 @@ export const Colors = {
     primary:"#1F222A",
     secondary:"#353840",
     tertiary:"#dadada",
+
     text:"#ffffff",
-    background:"#181920"
+
+    background:"#181920",
+
+    "gray-1":"#5555"
   }
 };

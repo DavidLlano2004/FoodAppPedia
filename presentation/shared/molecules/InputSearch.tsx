@@ -1,38 +1,27 @@
+import { Icons } from "@/assets/icons/IconsProvider";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { Ionicons } from "@expo/vector-icons";
 import React, { useRef, useState } from "react";
 import { TextInput, TextInputProps, View } from "react-native";
-import ThemedText from "./ThemedText";
+import IconSvg from "./IconSvg";
+const { IconSearchGray } = Icons;
 
 interface Props extends TextInputProps {
   icon?: keyof typeof Ionicons.glyphMap;
-  label: string;
 }
 
-const ThemedTextInput = ({ icon, label, style, ...rest }: Props) => {
+const InputSearch = ({ ...rest }: Props) => {
   const textColor = useThemeColor({}, "text");
 
   const [isActive, setIsActive] = useState(false);
   const inputRef = useRef<TextInput>(null);
-
   return (
-    <View className=" gap-2">
-      <ThemedText className="text-lg text-light-text dark:text-dark-text" type="bold">
-        {label}
-      </ThemedText>
+    <View className=" gap-2 ">
       <View
-        className={` border rounded-2xl h-[45px] px-4 ${isActive ? "border-light-primary" : "border-dark-tertiary"}`}
+        className={`  w-full  bg-[#F6F6F6] dark:bg-dark-primary transition-all duration-200 flex flex-row items-center gap-2 h-16 rounded-2xl px-4 ${isActive ? "border-[#dbdbdb] border" : "border-dark-tertiary"}`}
         onTouchStart={() => inputRef.current?.focus()}
       >
-        {/* {icon && (
-        <Ionicons
-          name={icon}
-          size={24}
-          color={textColor}
-          style={{ marginRight: 10 }}
-        />
-      )}
-        */}
+        <IconSvg width={20} height={20} image={IconSearchGray} />
         <TextInput
           ref={inputRef}
           onFocus={() => setIsActive(true)}
@@ -46,4 +35,4 @@ const ThemedTextInput = ({ icon, label, style, ...rest }: Props) => {
   );
 };
 
-export default ThemedTextInput;
+export default InputSearch;

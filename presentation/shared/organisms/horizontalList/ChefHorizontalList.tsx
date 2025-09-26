@@ -1,24 +1,31 @@
 import { Icons } from "@/assets/icons/IconsProvider";
-import IconSvg from "@/presentation/theme/components/IconSvg";
-import ThemedText from "@/presentation/theme/components/theme/ThemedText";
+import ThemedText from "@/presentation/shared/ThemedText";
+import IconSvg from "@/presentation/shared/molecules/IconSvg";
 import * as Haptics from "expo-haptics";
 import React from "react";
 import { FlatList, TouchableOpacity, View } from "react-native";
-import RecipeCard from "./RecipeCard";
+import CardChef from "../../molecules/cards/CardChef";
 
 const { IconArrowNextRed } = Icons;
 
+
 interface Props {
   title?: string;
-  recipes: number[];
+  chefs: number[];
 }
 
-const RecipesHorizontalList = ({ title, recipes = [] }: Props) => {
+const ChefHorizontalList = ({
+  title,
+  chefs = [],
+}: Props) => {
   return (
     <View>
       {title && (
         <View className="flex-row items-center justify-between mx-4 mb-4">
-          <ThemedText type="extraBold" className="text-2xl text-light-text dark:text-dark-text">
+          <ThemedText
+            type="extraBold"
+            className="text-2xl text-light-text dark:text-dark-text"
+          >
             {title}
           </ThemedText>
           <TouchableOpacity
@@ -36,12 +43,14 @@ const RecipesHorizontalList = ({ title, recipes = [] }: Props) => {
         showsHorizontalScrollIndicator={false}
         // keyExtractor={(item, i) => `${item.id}-${i}`}
         horizontal
-        renderItem={({ item }) => <RecipeCard />}
-        data={recipes}
+        renderItem={({ item }) => (
+          <CardChef />
+        )}
+        data={chefs}
         // onScroll={(event) => onScroll(event)}
       />
     </View>
   );
 };
 
-export default RecipesHorizontalList;
+export default ChefHorizontalList;

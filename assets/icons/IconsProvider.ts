@@ -3,6 +3,9 @@ import IconArrowBackLight from "./icon_arrow_back_light.svg";
 import IconArrowNextRed from "./icon_arrow_next_red_thin.svg";
 import IconBookMarkDark from "./icon_book_mark_dark.svg";
 import IconBookMarkLight from "./icon_book_mark_light.svg";
+import IconCloseDark from "./icon_close_dark.svg";
+import IconCloseLight from "./icon_close_light.svg";
+import IconDefaultProfile from "./icon_default_profile.svg";
 import IconDiscoverFilledRed from "./icon_discover_filled_red.svg";
 import IconDiscoverOutlineGray from "./icon_discover_outline_gray.svg";
 import IconHatChefDark from "./icon_hat_chef_dark.svg";
@@ -19,6 +22,7 @@ import IconProfileOutlineGray from "./icon_profile_outline_gray.svg";
 import IconRecipesFilledRed from "./icon_recipes_filled_red.svg";
 import IconRecipesOutlineGray from "./icon_recipes_outline_gray.svg";
 import IconSearchDark from "./icon_search_dark.svg";
+import IconSearchGray from "./icon_search_gray.svg";
 import IconSearchLight from "./icon_search_light.svg";
 import IconSettingsDark from "./icon_settings_dark.svg";
 import IconSettingsLight from "./icon_settings_light.svg";
@@ -54,4 +58,8 @@ export const Icons = {
   IconShareDark: IconShareDark,
   IconShareLight: IconShareLight,
   IconArrowNextRed: IconArrowNextRed,
+  IconSearchGray: IconSearchGray,
+  IconDefaultProfile: IconDefaultProfile,
+  IconCloseDark: IconCloseDark,
+  IconCloseLight: IconCloseLight,
 };

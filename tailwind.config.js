@@ -20,8 +20,9 @@ module.exports = {
         dark: {
           primary: Colors.dark.primary,
           secondary: Colors.dark.secondary,
-          tertiary:Colors.dark.tertiary,
+          tertiary: Colors.dark.tertiary,
           background: Colors.dark.background,
+          "gray-1": Colors.dark["gray-1"],
           text: Colors.dark.text,
         },
       },

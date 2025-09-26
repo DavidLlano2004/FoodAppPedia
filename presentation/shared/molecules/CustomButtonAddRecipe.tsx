@@ -12,7 +12,7 @@ const CustomButtonAddRecipe = () => {
     <Pressable
       onPress={() => {
         Haptics.selectionAsync();
-        router.push("/new-recipe-2");
+        router.push("/new-recipe");
       }}
       style={{
         top: -10,

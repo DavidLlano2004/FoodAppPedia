@@ -1,8 +1,8 @@
 import { Icons } from "@/assets/icons/IconsProvider";
 import { Images } from "@/assets/images/ImagesProvider";
-import ThemedButton from "@/presentation/theme/components/theme/ThemedButton";
-import ThemedText from "@/presentation/theme/components/theme/ThemedText";
-import ThemedView from "@/presentation/theme/components/theme/ThemedView";
+import ThemedButton from "@/presentation/shared/ThemedButton";
+import ThemedText from "@/presentation/shared/ThemedText";
+import ThemedView from "@/presentation/shared/ThemedView";
 import { router } from "expo-router";
 import React from "react";
 import { ImageBackground, View } from "react-native";

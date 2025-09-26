@@ -1,12 +1,8 @@
 import { Redirect } from "expo-router";
-import React, { useState } from "react";
+import React from "react";
 
 const FoodApp = () => {
-  const [redirect, setRedirect] = useState(true);
-  if (redirect) {
-    return <Redirect href="/templateAuth/loadingAuth" />;
-  }
-  return <Redirect href="/home" />;
+  return <Redirect href="/templateAuth/loadingAuth" />;
 };
 
 export default FoodApp;

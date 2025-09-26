@@ -1,7 +1,7 @@
 import { Icons } from "@/assets/icons/IconsProvider";
 import { Images } from "@/assets/images/ImagesProvider";
-import IconSvg from "@/presentation/theme/components/IconSvg";
-import ThemedText from "@/presentation/theme/components/theme/ThemedText";
+import ThemedText from "@/presentation/shared/ThemedText";
+import IconSvg from "@/presentation/shared/molecules/IconSvg";
 import * as Haptics from "expo-haptics";
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
@@ -10,10 +10,10 @@ import { ImageBackground, Pressable, View } from "react-native";
 const { BgChooseAuth } = Images;
 const { IconBookMarkDark } = Icons;
 
-const RecipeCard = () => {
+const MyRecipeCard = () => {
   return (
-    <Pressable className="px-4 active:opacity-95">
-      <View className="h-[220px] w-[155px] rounded-3xl overflow-hidden">
+    <Pressable className="active:opacity-95">
+      <View className="h-[250px] w-[170px] rounded-3xl overflow-hidden">
         <ImageBackground
           className="flex-1 p-3"
           source={BgChooseAuth}
@@ -56,4 +56,4 @@ const RecipeCard = () => {
   );
 };
 
-export default RecipeCard;
+export default MyRecipeCard;

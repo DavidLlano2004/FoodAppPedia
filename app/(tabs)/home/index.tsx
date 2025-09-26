@@ -1,5 +1,5 @@
-import RecipesHorizontalList from "@/presentation/home/components/RecipesHorizontalList";
-import ThemedView from "@/presentation/theme/components/theme/ThemedView";
+import RecipesHorizontalList from "@/presentation/shared/organisms/horizontalList/RecipesHorizontalList";
+import ThemedView from "@/presentation/shared/ThemedView";
 import React from "react";
 import { ScrollView, View } from "react-native";
 
@@ -8,7 +8,7 @@ const HomeScreen = () => {
     <ThemedView>
       <ScrollView>
         <View className="px-4 mt-5 mb-4">
-          <View className="  rounded-3xl h-36 bg-light-primary"></View>
+          <View className="rounded-3xl h-36 bg-light-primary"></View>
         </View>
         <View className="gap-6 pb-10">
           <RecipesHorizontalList

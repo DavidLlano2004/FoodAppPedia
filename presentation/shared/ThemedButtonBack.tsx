@@ -4,7 +4,7 @@ import { router } from "expo-router";
 
 import React from "react";
 import { Pressable, useColorScheme } from "react-native";
-import IconSvg from "../IconSvg";
+import IconSvg from "./molecules/IconSvg";
 const { IconArrowBackDark, IconArrowBackLight } = Icons;
 
 const ThemedButtonBack = () => {
