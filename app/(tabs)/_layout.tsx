@@ -103,7 +103,7 @@ const TabsLayout = () => {
         }}
       />
       <Tabs.Screen
-        name="profile"
+        name="profile/index"
         options={{
           title: "Cuenta",
           tabBarIcon: ({ focused }) => (

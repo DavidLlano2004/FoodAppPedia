@@ -19,7 +19,15 @@ const {
   IconShareLight,
 } = Icons;
 
-const ContainerIconsRightHeader = ({ screen = "" }) => {
+interface Props {
+  screen: string;
+  principalHeader?: boolean;
+}
+
+const ContainerIconsRightHeader = ({
+  screen,
+  principalHeader = true,
+}: Props) => {
   const dataIconsDarkLight = [
     {
       screen: "home",
@@ -55,7 +63,7 @@ const ContainerIconsRightHeader = ({ screen = "" }) => {
   const colorShema = useColorScheme();
 
   return (
-    <View className="flex-row px-4 gap-8">
+    <View className={`flex-row ${principalHeader ? "px-4" : "px-2"} gap-8`}>
       {filterOptionsIconsByScreen?.icons?.map((icon) => (
         <TouchableOpacity
           hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}

@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 
 import { persistor, store } from "@/redux/store";
 import { View } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { PersistGate } from "redux-persist/integration/react";
 import "../global.css";
 
@@ -29,13 +30,15 @@ export default function RootLayout() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <View style={{ flex: 1 }}>
-            <Stack screenOptions={{ headerShown: false }} />
-          </View>
-        </PersistGate>
-      </Provider>
+      <SafeAreaProvider>
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <View style={{ flex: 1 }}>
+              <Stack screenOptions={{ headerShown: false }} />
+            </View>
+          </PersistGate>
+        </Provider>
+      </SafeAreaProvider>
     </QueryClientProvider>
   );
 }

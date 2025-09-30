@@ -16,6 +16,7 @@ import IconNotiDark from "./icon_noti_dark.svg";
 import IconNotiLight from "./icon_noti_light.svg";
 import IconOptionsDark from "./icon_options_dark.svg";
 import IconOptionsLight from "./icon_options_light.svg";
+import IconPencilRed from "./icon_pencil_red.svg";
 import IconPlusWhite from "./icon_plus_white.svg";
 import IconProfileFillledRed from "./icon_profile_filled_red.svg";
 import IconProfileOutlineGray from "./icon_profile_outline_gray.svg";
@@ -28,6 +29,7 @@ import IconSettingsDark from "./icon_settings_dark.svg";
 import IconSettingsLight from "./icon_settings_light.svg";
 import IconShareDark from "./icon_share_dark.svg";
 import IconShareLight from "./icon_share_light.svg";
+
 import IconGoogle from "./img_google.png";
 
 export const Icons = {
@@ -62,4 +64,5 @@ export const Icons = {
   IconDefaultProfile: IconDefaultProfile,
   IconCloseDark: IconCloseDark,
   IconCloseLight: IconCloseLight,
+  IconPencilRed: IconPencilRed,
 };

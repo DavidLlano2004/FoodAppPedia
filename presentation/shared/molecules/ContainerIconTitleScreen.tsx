@@ -19,7 +19,7 @@ const ContainerIconTitleScreen = ({ route }: Props) => {
         return "Descubrir";
       case "recipes/index":
         return "Recetas";
-      case "profile":
+      case "profile/index":
         return "Cuenta ";
       default:
         return route;

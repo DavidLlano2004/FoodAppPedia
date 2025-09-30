@@ -110,7 +110,7 @@ const LoginScreen = () => {
             <ThemedButton
               disabled={mutationLogin.isPending}
               onPress={handleSubmit(onSubmit)}
-              customTextButton="text-dark-text"
+              customTextButton="text-dark-text text-xl"
               className="bg-light-primary"
               isLoading={mutationLogin.isPending}
             >

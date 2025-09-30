@@ -7,7 +7,11 @@ import { Pressable, useColorScheme } from "react-native";
 import IconSvg from "./molecules/IconSvg";
 const { IconArrowBackDark, IconArrowBackLight } = Icons;
 
-const ThemedButtonBack = () => {
+interface Props {
+  isButtonLogin: boolean;
+}
+
+const ThemedButtonBack = ({ isButtonLogin = true }: Props) => {
   const colorScheme = useColorScheme();
   return (
     <Pressable
@@ -16,7 +20,7 @@ const ThemedButtonBack = () => {
         Haptics.selectionAsync();
       }}
       hitSlop={{ top: 30, bottom: 30, left: 30, right: 30 }}
-      className="border-[0.2px] border-dark-tertiary rounded-full w-[45px] h-[45px] justify-center items-center"
+      className={`${isButtonLogin ? "border-[0.2px] border-dark-tertiary rounded-full w-[45px] h-[45px] justify-center items-center" : "px-2"}`}
     >
       <IconSvg
         width={20}

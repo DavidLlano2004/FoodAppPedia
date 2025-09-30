@@ -15,6 +15,7 @@ interface Props extends PressableProps {
   icon?: React.FC<SvgProps>;
   customTextButton?: string;
   heightButton?: string;
+  heightAndWidthIcon?: number;
   isLoading?: boolean;
   onPress?: () => void;
 }
@@ -26,6 +27,7 @@ const ThemedButton = ({
   children,
   customTextButton,
   heightButton = "h-[60px]",
+  heightAndWidthIcon = 26,
   isLoading,
   ...rest
 }: Props) => {
@@ -35,16 +37,16 @@ const ThemedButton = ({
         Haptics.selectionAsync();
         onPress();
       }}
-      className={`w-full flex ${heightButton}  justify-center items-center rounded-[100px] px-6 active:opacity-90 transition-all ease-in duration-100 ${className}`}
+      className={`${heightButton} flex-row justify-center items-center rounded-[100px] px-6 active:opacity-90 transition-all ease-in duration-100 ${className}`}
       {...rest}
     >
-      {icon && <IconSvg height={26} width={26} image={icon} />}
+      {icon && <IconSvg height={heightAndWidthIcon} width={heightAndWidthIcon} image={icon} />}
 
       {isLoading ? (
         <ActivityIndicator size="small" color={"white"} />
       ) : (
         <Text
-          className={`text-xl ${customTextButton ? customTextButton : "text-light-text dark:text-dark-text"} `}
+          className={` ${customTextButton ? customTextButton : "text-light-text dark:text-dark-text text-xl"} `}
           style={{ fontFamily: "NunitoSansSemibold" }}
         >
           {children}

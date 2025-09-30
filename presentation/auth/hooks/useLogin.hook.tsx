@@ -25,12 +25,6 @@ export const useLogin = () => {
       dispatch(
         loginCase({
           id: data.response.id,
-          email: data.response.email,
-          fullName: data.response.fullName,
-          userName:data.response.userName,
-          phone: data.response.phone,
-          address: data.response.address,
-          birthday: data.response.birthday,
         })
       );
 

@@ -14,6 +14,7 @@ interface Props extends TextInputProps {
   control?: any;
   nameRegister: string;
   rules?: object;
+  defaultValue?: string;
   errors?: any;
 }
 
@@ -25,6 +26,7 @@ const ThemedTextInput = ({
   heightInput = "h-[45px]",
   control,
   nameRegister,
+  defaultValue,
   rules,
   ...rest
 }: Props) => {
@@ -63,6 +65,7 @@ const ThemedTextInput = ({
               onBlur={() => setIsActive(false)}
               placeholderTextColor={"#8b8b8b"}
               value={value}
+              defaultValue={defaultValue}
               onChangeText={onChange}
               {...rest}
             />

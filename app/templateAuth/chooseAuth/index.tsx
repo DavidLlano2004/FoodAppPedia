@@ -37,20 +37,20 @@ const ChooseAuthScreen = () => {
           <View className="w-full gap-6">
             <ThemedButton
               icon={IconGoogle}
-              customTextButton="text-light-text dark:text-dark-text"
+              customTextButton="text-light-text dark:text-dark-text text-xl"
               className=" bg-white dark:bg-dark-primary dark:border-[1px] dark:border-[#3a3a3a] flex-row items-center gap-3"
             >
               Continuar con google
             </ThemedButton>
             <ThemedButton
-              customTextButton="text-dark-text"
+              customTextButton="text-dark-text text-xl"
               className="bg-light-primary"
             >
               Comenzar
             </ThemedButton>
             <ThemedButton
               onPress={() => router.navigate("/templateAuth/login")}
-              customTextButton="text-light-primary dark:text-dark-text"
+              customTextButton="text-light-primary dark:text-dark-text text-xl"
               className="h-[60px] bg-light-tertiary dark:bg-dark-secondary"
             >
               Ya tengo una cuenta
